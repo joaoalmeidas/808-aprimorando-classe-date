@@ -35,8 +35,7 @@ public class Data {
 		
 	}
 	
-	
-	
+
 	public int getDia() {
 		return dia;
 	}
