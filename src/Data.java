@@ -31,7 +31,6 @@ public class Data {
 		this.dia = dia;
 		this.ano = ano;
 		
-		System.out.printf("%n%s%n", this);
 		
 		
 	}
@@ -86,6 +85,8 @@ public class Data {
 	
 	public void proximoDia() {
 		
+		System.out.println(toString());
+		
 		if(getDia() == 28 && getMes() == 2 && (getAno() % 400 == 0 || (getAno() % 4 == 0 && getAno() % 100 != 0))) {
 			
 			setDia(getDia() + 1);
@@ -111,8 +112,6 @@ public class Data {
 			setDia(getDia() + 1);
 			
 		}
-		
-		System.out.println(toString());
 		
 	}
 }
