@@ -22,8 +22,8 @@ public class Data {
 			throw new IllegalArgumentException("dia (" +dia+ ") esta fora dos limies do dia indicado.");
 		}
 		
-		if(ano < 1900 || ano > Calendar.YEAR) {
-			throw new IllegalArgumentException("ano (" +ano+ ") esta fora dos limies do ano indicado.");
+		if(ano < 1900 || ano > Calendar.getInstance().get(Calendar.YEAR)) {
+			throw new IllegalArgumentException("ano (" +ano+ ") esta fora dos limies do ano indicado."+Calendar.YEAR);
 		}
 		
 		
@@ -31,7 +31,7 @@ public class Data {
 		this.dia = dia;
 		this.ano = ano;
 		
-		System.out.printf("Construtor do objeto Data para data: %s%n", this);
+		System.out.printf("%n%s%n", this);
 		
 		
 	}

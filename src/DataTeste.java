@@ -2,7 +2,12 @@
 public class DataTeste {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Data data = new Data(1, 1, 2017);
+		
+		for(int i = 0; i < 365; i++) {
+			data.proximoDia();
+		}
 
 	}
 
