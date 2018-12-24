@@ -86,7 +86,11 @@ public class Data {
 	
 	public void proximoDia() {
 		
-		if(getDia() == diasPorMes[mes]) {
+		if(getDia() == 28 && getMes() == 2 && (getAno() % 400 == 0 || (getAno() % 4 == 0 && getAno() % 100 != 0))) {
+			
+			setDia(getDia() + 1);
+			
+		}else if(getDia() == diasPorMes[mes] || getMes() == 2 && getDia() == 29) {
 			
 			setDia(1);
 			

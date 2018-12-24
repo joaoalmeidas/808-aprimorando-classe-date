@@ -5,7 +5,7 @@ public class DataTeste {
 		
 		Data data = new Data(1, 1, 2017);
 		
-		for(int i = 0; i < 365; i++) {
+		for(int i = 0; i < 364; i++) {
 			data.proximoDia();
 		}
 
