@@ -36,7 +36,79 @@ public class Data {
 		
 	}
 	
+	
+	
+	public int getDia() {
+		return dia;
+	}
+
+
+
+	public void setDia(int dia) {
+		this.dia = dia;
+	}
+
+
+
+	public int getMes() {
+		return mes;
+	}
+
+
+
+	public void setMes(int mes) {
+		this.mes = mes;
+	}
+
+
+
+	public int getAno() {
+		return ano;
+	}
+
+
+
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+
+
+
+	public static int[] getDiaspormes() {
+		return diasPorMes;
+	}
+
+
+
 	public String toString() {
 		return String.format("%d/%d/%d", dia, mes, ano);
+	}
+	
+	public void proximoDia() {
+		
+		if(getDia() == diasPorMes[mes]) {
+			
+			setDia(1);
+			
+			if(getMes() == 12) {
+				
+				setMes(1);
+
+				setAno(getAno() + 1);
+				
+			}else {
+				
+				setMes(getMes() + 1);
+				
+			}
+			
+		}else {
+			
+			setDia(getDia() + 1);
+			
+		}
+		
+		System.out.println(toString());
+		
 	}
 }
