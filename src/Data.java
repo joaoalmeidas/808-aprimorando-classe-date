@@ -1,3 +1,4 @@
+import java.util.Calendar;
 
 public class Data {
 	
@@ -18,8 +19,13 @@ public class Data {
 		}
 		
 		if(mes == 2 && dia == 29 && !(ano % 400 == 0 || (ano % 4 == 0 && ano % 100 != 0))) {
-			throw new IllegalArgumentException("dia (" +dia+ ") esta fora dos limies do mês indicado.");
+			throw new IllegalArgumentException("dia (" +dia+ ") esta fora dos limies do dia indicado.");
 		}
+		
+		if(ano < 1900 || ano > Calendar.YEAR) {
+			throw new IllegalArgumentException("ano (" +ano+ ") esta fora dos limies do ano indicado.");
+		}
+		
 		
 		this.mes = mes;
 		this.dia = dia;
